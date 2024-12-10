@@ -69,6 +69,20 @@ const Hero = () => {
 					</motion.a>
 				</div>
 			</div>
+			<motion.div
+				className="absolute top-1/2 left-0 right-0"
+				initial={{ x: '-100%' }}
+				animate={{
+					x: '100%',
+					y: [0, -50, 0, 50, 0],
+				}}
+				transition={{
+					x: { duration: 10, repeat: Infinity, ease: 'linear' },
+					y: { duration: 5, repeat: Infinity, ease: 'easeInOut' },
+				}}
+			>
+				<Plane size={32} className="text-primary/30 rotate-90" />
+			</motion.div>
 		</section>
 	)
 }
